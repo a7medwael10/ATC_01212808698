@@ -21,15 +21,6 @@ A complete event booking system built with **Laravel 11** and **Blade**, allowin
   - Total users
   - Total bookings
 
----
-
-## 📷 Screenshots
-
-| Home Page | Admin Dashboard |
-|-----------|-----------------|
-| ![home](screenshots/home.png) | ![dashboard](screenshots/dashboard.png) |
-
-> Add your own screenshots in a `/screenshots` folder
 
 ---
 
@@ -39,7 +30,6 @@ A complete event booking system built with **Laravel 11** and **Blade**, allowin
 - **Frontend**: Blade + Bootstrap 5
 - **Database**: MySQL
 - **Authentication**: Manual with role-based control
-- **AJAX**: Native JS (fetch API)
 - **Modals**: Bootstrap 5
 
 ---
@@ -68,3 +58,7 @@ php artisan storage:link
 
 # 7. Serve the application
 php artisan serve
+
+# 8. For Admin Panal use: 
+Email: admin@admin.com
+Password: 12345678
