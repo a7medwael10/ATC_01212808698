@@ -52,4 +52,9 @@ class User extends Authenticatable
         return $query->where('role', 'admin');
     }
 
+    public function scopeOfUsers($query)
+    {
+        return $query->where('role', 'user');
+    }
+
 }
