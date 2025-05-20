@@ -21,13 +21,32 @@ class EventFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->sentence(3),
-            'description' => $this->faker->paragraph,
-            'category' => $this->faker->randomElement(['Tech', 'Art', 'Music', 'Sports']),
+            'name' => $this->faker->randomElement([
+                'Tech Innovation Summit',
+                'Art & Creativity Expo',
+                'Live Jazz Night',
+                'Startup Networking Meetup',
+                'Photography Workshop',
+                'Marathon for Charity',
+                'AI in Healthcare Conference',
+                'Street Food Festival',
+                'Modern Dance Show'
+            ]),
+            'description' => $this->faker->paragraph(3, true),
+            'category' => $this->faker->randomElement(['Technology', 'Art', 'Music', 'Sports', 'Business', 'Health']),
             'date' => $this->faker->dateTimeBetween('+1 week', '+2 months'),
-            'venue' => $this->faker->city,
-            'price' => $this->faker->randomFloat(2, 10, 500),
-            'image' => 'https://via.placeholder.com/300x200.png?text=Event',
+            'venue' => $this->faker->randomElement([
+                'Downtown Convention Center',
+                'City Art Gallery',
+                'Open Air Theater',
+                'Tech Hub Auditorium',
+                'Riverside Park',
+                'University Hall',
+                'Community Sports Arena'
+            ]),
+            'price' => $this->faker->randomFloat(2, 0, 200), // 0 = free events
+            'image' => 'Events_images/' . rand(1, 9) . '.jpg',
         ];
     }
+
 }
