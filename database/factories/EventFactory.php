@@ -36,15 +36,15 @@ class EventFactory extends Factory
             'category' => $this->faker->randomElement(['Technology', 'Art', 'Music', 'Sports', 'Business', 'Health']),
             'date' => $this->faker->dateTimeBetween('+1 week', '+2 months'),
             'venue' => $this->faker->randomElement([
-                'Downtown Convention Center',
-                'City Art Gallery',
-                'Open Air Theater',
+                'Downtown  Center',
+                'City Art',
+                'Open  Theater',
                 'Tech Hub Auditorium',
                 'Riverside Park',
                 'University Hall',
-                'Community Sports Arena'
+                'Sports Arena'
             ]),
-            'price' => $this->faker->randomFloat(2, 0, 200), // 0 = free events
+            'price' => $this->faker->randomFloat(2, 0, 200),
             'image' => 'Events_images/' . rand(1, 9) . '.jpg',
         ];
     }
